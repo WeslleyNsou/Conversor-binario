@@ -42,16 +42,36 @@ BOTON.addEventListener("click", function() {
       let deCimal = NUMERO.value;//pegar o valor do input
       let biNario = "";//variável para armazenar o resultado da conversão
 
-      for (var i = 0; deCimal > 0; i++) {
+      for (let i = 0; deCimal > 0; i++) {
           let residuo = deCimal % 2;//calcular o resto da divisão
           biNario = residuo + biNario;//concatenar o resto na variável binário
           deCimal = Math.floor(deCimal / 2);//arredondar para baixo
           RESULTADO.innerHTML = biNario;
       }*/
 
-    // Conversão de binario para decimal
+ /*// Conversão de binario para decimal
     let bInario = NUMERO.value;//pegar o valor do input
+    let dEciMal = 0;//variável para armazenar o resultado da conversão
+
+    for (let i = 0; i < bInario.length; i++) {
+        let digito = bInario.charAt(i);//pegar o dígito da posição i
+        let potencia = Math.pow(2, bInario.length - 1 - i);//calcular a potência de 2
+        let resultado = digito * potencia;//multiplicar o dígito pela potência de 2
+        dEciMal += resultado;//somar o resultado na variável decimal
+        RESULTADO.innerHTML = dEciMal;//exibir o resultado na tela
+    }
+    */
     
+    //Conversão de decimal para hexadecimal
+    let deCimal = NUMERO.value;//pegar o valor do input
+    let hexaDecimal = [];//variável para armazenar o resultado da conversão
+    for (let i = 0; deCimal > 0; i++){
+        let residuo = deCimal % 16;//calcular o resto da divisão
+        let DigitosHexa = String(residuo);//pegar o valor do input e separar os dígitos
+        hexaDecimal = residuo;//concatenar o resto na variável hexadecimal
+        deCimal = Math.floor(deCimal / 16);//arredondar para baixo
+        RESULTADO.innerHTML = hexaDecimal ;//exibir o resultado na tela
+    }
 })
 
  
