@@ -63,7 +63,7 @@ BOTON.addEventListener("click", function() {
     */
     
     //Conversão de decimal para hexadecimal
-    let deCimal = NUMERO.value;//pegar o valor do input
+   /* let deCimal = NUMERO.value;//pegar o valor do input
     let hexaDecimal = [];//variável para armazenar o resultado da conversão
     for (let i = 0; deCimal > 0; i++){
         let residuo = deCimal % 16;//calcular o resto da divisão
@@ -94,6 +94,9 @@ BOTON.addEventListener("click", function() {
         deCimal = Math.floor(deCimal / 16);//arredondar para baixo
         RESULTADO.innerHTML = hexaDecimal ;//exibir o resultado na tela
     }
+    */
+    //Conversão de hexadecimal para decimal
+    let hexaDecimal = NUMERO.value;//pegar o valor do input
 });
 
  
