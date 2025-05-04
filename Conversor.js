@@ -67,11 +67,33 @@ BOTON.addEventListener("click", function() {
     let hexaDecimal = [];//variável para armazenar o resultado da conversão
     for (let i = 0; deCimal > 0; i++){
         let residuo = deCimal % 16;//calcular o resto da divisão
-        let DigitosHexa = String(residuo);//pegar o valor do input e separar os dígitos
-        hexaDecimal = residuo;//concatenar o resto na variável hexadecimal
+        if (residuo <9) {
+            hexaDecimal = residuo + hexaDecimal;//concatenar o resto na variável hexadecimal
+        }else{
+            switch (residuo) {
+                case 10:
+                    hexaDecimal = "A" + hexaDecimal;//concatenar o resto na variável hexadecimal
+                    break;
+                case 11:
+                    hexaDecimal = "B" + hexaDecimal;//concatenar o resto na variável hexadecimal
+                    break;
+                case 12:
+                    hexaDecimal = "C" + hexaDecimal;//concatenar o resto na variável hexadecimal
+                    break;
+                case 13:
+                    hexaDecimal = "D" + hexaDecimal;//concatenar o resto na variável hexadecimal
+                    break;
+                case 14:
+                    hexaDecimal = "E" + hexaDecimal;//concatenar o resto na variável hexadecimal
+                    break;
+                case 15:
+                    hexaDecimal = "F" + hexaDecimal;//concatenar o resto na variável hexadecimal
+                    break;
+            }
+        }
         deCimal = Math.floor(deCimal / 16);//arredondar para baixo
         RESULTADO.innerHTML = hexaDecimal ;//exibir o resultado na tela
     }
-})
+});
 
  
