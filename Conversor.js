@@ -95,8 +95,54 @@ BOTON.addEventListener("click", function() {
         RESULTADO.innerHTML = hexaDecimal ;//exibir o resultado na tela
     }
     */
+   /*
     //Conversão de hexadecimal para decimal
     let hexaDecimal = NUMERO.value;//pegar o valor do input
+    let digiHexa = hexaDecimal.split('');//separar os dígitos
+    let Decimal = 0;//variável para armazenar o resultado da conversão
+
+    for (let i = 0; i < digiHexa.length; i++) {
+        let digitos = digiHexa[i];//pegar o dígito da posição i
+        switch (digitos) {//verificar se o dígito é A, B, C, D, E ou F
+            case "A":
+                digitos = 10;//atribuir o valor 10
+                break;
+            case "B":
+                digitos = 11;//atribuir o valor 11
+                break;
+            case "C":
+                digitos = 12;//atribuir o valor 12
+                break;
+            case "D":
+                digitos = 13;//atribuir o valor 13
+                break;
+            case "E":
+                digitos = 14;//atribuir o valor 14
+                break;
+            case "F":
+                digitos = 15;//atribuir o valor 15
+                break;
+        }
+        let potencia = Math.pow(16, digiHexa.length - 1 - i) * digitos;//calcular a potência de 16
+        Decimal += potencia;//somar o resultado na variável decimal
+        RESULTADO.innerHTML = Decimal;//exibir o resultado na tela
+    }
+    */
+    /*    //Conversão de Decimal para octal
+    let deCimal = NUMERO.value;//pegar o valor do input  
+    let octal = "";//variável para armazenar o resultado da conversão
+
+    for (let i = 0; deCimal > 0; i++){
+        let residuo = deCimal % 8;
+        octal = residuo + octal;
+        deCimal = Math.floor(deCimal / 8);
+        RESULTADO.innerHTML = octal;
+
+    }
+    */
+    //Conversão de octal para decimal
+    let octal = NUMERO.value;
+
 });
 
  
