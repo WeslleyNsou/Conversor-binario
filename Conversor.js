@@ -1,7 +1,7 @@
 const RESULTADO = document.getElementById("resultado");
 const BOTON = document.getElementById("converter");
 const NUMERO = document.getElementById("numero");
-const BINXDEC = ['0', '1', '10', '11', '100', '101', '110', '111', '1000', '1001', '1010', '1011', '1100', '1101', '1110', '1111'];
+const BINHEX = ['0000', '0001', '0010', '0011', '0100', '0101', '0110', '0111', '1000', '1001', '1010', '1011', '1100', '1101', '1110', '1111'];
 
 BOTON.addEventListener("click", function() {
     RESULTADO.innerHTML = "";//Limpar o resultado anterior
@@ -140,8 +140,37 @@ BOTON.addEventListener("click", function() {
 
     }
     */
+   /*
     //Conversão de octal para decimal
     let octal = NUMERO.value;
+    let digOctal = octal.split('');
+    let Decimal = 0;
+    
+    for (let i = 0 ; i < digOctal.length; i++){
+        let digitos = digOctal[i];
+        let potencia = Math.pow(8, digOctal.length - 1 - i);
+        let multiplicar = digitos * potencia;
+        Decimal += multiplicar;
+        //Como a variavel Decimal ja esta definida como 0, ou seja como um numero, ela ira somar os valores resultantes da variavel
+        multiplicar, mas se Decimal fosse definido como "", seria uma string e os valores de multiplicar seriam concatenados e não somados
+        RESULTADO.innerHTML = Decimal;
+    }
+    */
+
+    //Conversão de binário para hexadecimal
+    let binario = NUMERO.value;
+    let digBinario = binario.split('');
+
+    if (digBinario.length % 4 != 0) {
+        let zeros = 4 - (digBinario.length % 4);
+        for (let i = 0; i < zeros; i++) {
+            digBinario.unshift(0);
+            let binario = digBinario.join('');//juntar os digitos em uma string e retornar o valor para digBinario
+            
+            let hexaDecimal = [];//variável para armazenar o resultado da conversão
+        }
+    }
+
 
 });
 
