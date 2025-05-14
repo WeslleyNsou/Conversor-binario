@@ -159,16 +159,15 @@ BOTON.addEventListener("click", function() {
 
     //Conversão de binário para hexadecimal
     let binario = NUMERO.value;
-    let digBinario = binario.split('');
+    let decimal = 0;
+    let hexaDecimal = "";
 
-    if (digBinario.length % 4 != 0) {
-        let zeros = 4 - (digBinario.length % 4);
-        for (let i = 0; i < zeros; i++) {
-            digBinario.unshift(0);
-            let binario = digBinario.join('');//juntar os digitos em uma string e retornar o valor para digBinario
-            
-            let hexaDecimal = [];//variável para armazenar o resultado da conversão
-        }
+    for (let i = 0; i < binario.length; i++) {
+        let digito = binario.charAt(i);
+        let potencia = Math.pow(2, binario.length - 1 - i);
+        let resultado = digito * potencia;
+        decimal += resultado;
+        
     }
 
 
