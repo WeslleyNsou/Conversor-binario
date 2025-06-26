@@ -50,6 +50,7 @@ BOTON.addEventListener("click", function() {
       }*/
 
  /*// Conversão de binario para decimal
+
     let bInario = NUMERO.value;//pegar o valor do input
     let dEciMal = 0;//variável para armazenar o resultado da conversão
 
@@ -63,6 +64,7 @@ BOTON.addEventListener("click", function() {
     */
     
     //Conversão de decimal para hexadecimal
+    
    /* let deCimal = NUMERO.value;//pegar o valor do input
     let hexaDecimal = [];//variável para armazenar o resultado da conversão
     for (let i = 0; deCimal > 0; i++){
